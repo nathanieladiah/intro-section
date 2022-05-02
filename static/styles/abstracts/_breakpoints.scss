@@ -1,0 +1,11 @@
+@use 'functions' as f;
+
+// 700px, 900px, 1440px, 
+// 1em is based on the browser's font size basically divide by 16
+
+// breakpoints-up
+$breakpoints: (
+	"medium": f.em(700),
+	"large": f.em(900),
+	"xlarge": f.em(1440),
+);

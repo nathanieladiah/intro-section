@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header>
-    <div>
-      <img src="./static/images/logo.svg" alt="snap logo" class="logo">
-    </div>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-    <button id="nav-toggle" class="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false"><span class="sr-only">Menu</span></button>
-
-    <nav class="mobile-nav">
-      Features
-      Company
-      Careers
-      About
-    </nav>
-    <nav class="desktop-nav" style="display: none;">
-      Features
-      Company
-      Careers
-      About
-         
-      Login
-      Register
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <div class="hero__img">
-        <!-- <img src="./static/images/image-hero-mobile.png" alt="" class="hero-img"> -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="dist/style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./static/images/logo.svg" alt="snap logo" class="logo" />
       </div>
-      
-      <div class="hero__body">
-        <h1 class="hero__title">Make remote work</h1>
 
-        <p class="hero__text">
-          Get your team in sync, no matter your location. Streamline processes, 
-          create team rituals, and watch productivity soar.
-        </p>
+      <button
+        id="nav-toggle"
+        class="mobile-nav-toggle"
+        aria-controls="mobile-nav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
 
-        <a href="#" class="button--cta">Learn more</a>
+      <nav class="mobile-nav">Features Company Careers About</nav>
+      <nav class="desktop-nav" style="display: none">
+        Features Company Careers About Login Register
+      </nav>
+    </header>
 
-        <div class="logo-container">
-          <img src="./static/images/client-databiz.svg" alt="" class="brand-logo">
-          <img src="./static/images/client-audiophile.svg" alt="" class="brand-logo">
-          <img src="./static/images/client-meet.svg" alt="" class="brand-logo">
-          <img src="./static/images/client-maker.svg" alt="" class="brand-logo">
+    <main>
+      <div class="hero">
+        <div class="hero__img">
+          <!-- <img src="./static/images/image-hero-mobile.png" alt="" class="hero-img"> -->
+        </div>
+
+        <div class="hero__body">
+          <h1 class="hero__title">Make remote work</h1>
+
+          <p class="hero__text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+
+          <a href="#" class="button--cta hover-btn">Learn more</a>
+
+          <div class="logo-container">
+            <img
+              src="./static/images/client-databiz.svg"
+              alt=""
+              class="brand-logo"
+            />
+            <img
+              src="./static/images/client-audiophile.svg"
+              alt=""
+              class="brand-logo"
+            />
+            <img
+              src="./static/images/client-meet.svg"
+              alt=""
+              class="brand-logo"
+            />
+            <img
+              src="./static/images/client-maker.svg"
+              alt=""
+              class="brand-logo"
+            />
+          </div>
         </div>
       </div>
+    </main>
 
-    </div>
-  </main>
-
-
-
-  
-  <!-- <div class="attribution">
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+  </body>
 </html>

@@ -1,1 +1,33 @@
 // Use the scss maps to create some global color utility classes if you want
+@use "../abstracts/" as a;
+
+:root {
+	// colors - refer to abstracts/colors
+	// but active token is set in abstracts/tokens
+	@each $color-name, $values in a.$active-theme {
+		@each $shade-name, $shade-value in $values {
+			--#{$color-name}-#{$shade-name}: #{$shade-value};
+		}
+	}
+
+	// get font sizes from abstracts/type
+	// type scale has two scales for large and small screens
+	@each $screen-size, $font-size in a.$type-scale {
+		@if $screen-size == small {
+			@each $size, $value in $font-size {
+				--fs-#{$size}: #{$value};
+			}
+		} @else {
+			// Set up a media query for larger screens
+			@include a.mq(medium) {
+				@each $size, $value in $font-size {
+					--fs-#{$size}: #{$value};
+				}
+			}
+		}
+	}
+
+	// @each $font-size, $size in a.$font-sizes {
+	// 	--fs-#{$font-size}: #{$size};
+	// }
+}
