@@ -1,5 +1,0 @@
-@use "../abstracts/" as a;
-
-.hover-btn {
-	@include a.hover-lift();
-}
