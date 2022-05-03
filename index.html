@@ -71,8 +71,34 @@
         </ul>
       </nav>
 
-      <nav class="desktop-nav" style="display: none;">
-        Features Company Careers About Login Register
+      <nav class="desktop">
+        <ul class="desktop-nav" id="desktop-nav" data-visible="false">
+          <li class="dropdown">
+            <button id="features" class="nav-dropdown-toggle" aria-controls="features-dropdown" aria-expanded="false">Features</button>
+          </li>
+          <div class="dropdown-items features" id="features-dropdown" data-visible="false">
+              <img src="../static/images/icon-todo.svg" alt="">
+              <a href="#" class="nav-link">Todo List</a>
+              <img src="../static/images/icon-calendar.svg" alt="">
+              <a href="#" class="nav-link">Calendar</a>
+              <img src="../static/images/icon-reminders.svg" alt="">
+              <a href="#" class="nav-link">Reminders</a>
+              <img src="../static/images/icon-planning.svg" alt="">
+              <a href="#" class="nav-link">Planning</a>
+          </div>
+          <li class="dropdown" id="company">
+            <button id="company" class="nav-dropdown-toggle" aria-controls="company-dropdown" aria-expanded="false">Company</button>
+          </li>
+          <div class="dropdown-items company" id="company-dropdown" data-visible="false">
+            <a href="#" class="nav-link">History</a>
+            <a href="#" class="nav-link">Our Team</a>
+            <a href="#" class="nav-link">Blog</a>
+          </div>
+          <li><a class="nav-link" href="#">Careers</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Login</a></li>
+          <li><a href="#" class="nav-link nav-link--cta">Register</a></li>
+        </ul>
       </nav>
     </header>
 
