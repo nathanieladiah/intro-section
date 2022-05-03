@@ -273,12 +273,46 @@ header {
     padding: 0;
     margin: 0;
   }
+  .desktop-nav li:nth-of-type(1), .desktop-nav li:nth-of-type(2) {
+    margin-right: 1.5rem;
+  }
   .desktop-nav li:nth-last-child(2) {
     margin-left: auto;
   }
   .desktop-nav .dropdown-items {
     margin: 0;
     display: none;
+    position: absolute;
+    padding: 1.5625em;
+    background-color: white;
+    border-radius: 10px;
+    top: 3.25rem;
+  }
+  .desktop-nav .dropdown-items[data-visible=true] {
+    display: grid;
+    -webkit-animation: fade-in 700ms forwards;
+            animation: fade-in 700ms forwards;
+    gap: 1rem;
+  }
+  .desktop-nav .dropdown-items[closing] {
+    -webkit-animation: fade-out 500ms forwards;
+            animation: fade-out 500ms forwards;
+  }
+  .desktop-nav .dropdown-items.features {
+    grid-template-columns: 1rem 1fr;
+    right: -1rem;
+  }
+  .desktop-nav .dropdown-items.features img {
+    place-self: center;
+  }
+  .desktop-nav .dropdown-items.features a {
+    align-self: center;
+  }
+  .desktop-nav .dropdown-items.company {
+    left: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 

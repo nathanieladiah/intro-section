@@ -224,10 +224,13 @@ header {
 		
 }
 
+// The actual nav element
 .desktop {
 	// width: 100%;
 	flex: 1;
 }
+
+// TODO Refactor the mobile and desktop nav into one
 .desktop-nav {
 	display: none;
 
@@ -243,6 +246,12 @@ header {
 
 		li {
 
+			// add more space because ::after eats into gap
+			&:nth-of-type(1),
+			&:nth-of-type(2) {
+				 margin-right: 1.5rem;
+			 }
+
 			// margin-right: abs.rem(40);
 			&:nth-last-child(2) {
 				margin-left: auto;
@@ -252,10 +261,43 @@ header {
 		.dropdown-items {
 			margin: 0;
 			display: none;
+			position: absolute;
+			padding: abs.em(25);
+			background-color: white;
+			border-radius: 10px;
+			// top: abs.rem(36);
+			top: 3.25rem;
 
-			// &.features {
+			&[data-visible='true'] {
+				display: grid;
+				animation: fade-in 700ms forwards;
+				gap: 1rem;
+			}
 
-			// }
+			&[closing] {
+				animation: fade-out 500ms forwards;
+			}
+
+			&.features {
+				grid-template-columns: 1rem 1fr;
+				// to line up with the arrows
+				right: -1rem;
+
+				img {
+					place-self: center;
+				}
+
+				a {
+					align-self:center;
+				}
+				
+			}
+
+			&.company {
+				left: 0;
+				width: max-content;
+			
+			}
 		}
 		
 	}
