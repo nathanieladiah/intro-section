@@ -178,12 +178,10 @@ header .mobile-nav {
 }
 .hero .logo-container {
   display: flex;
+  width: 100%;
   margin-inline: 1rem;
+  gap: 1.875rem;
 }
-.hero .logo-container .brand-logo {
-  width: 25%;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
