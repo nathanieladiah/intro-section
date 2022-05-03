@@ -127,10 +127,16 @@ header {
   font: inherit;
   color: var(--clr-gray);
 }
+.nav-link:hover, .nav-link:focus {
+  color: var(--clr-dark);
+}
 .nav-link--cta {
   border: 2px solid var(--clr-gray);
   border-radius: 15px;
   padding: 0.8125em 1.375em;
+}
+.nav-link--cta:hover, .nav-link--cta:focus {
+  border-color: var(--clr-dark);
 }
 
 .dropdown {
@@ -141,6 +147,14 @@ header {
   background-color: transparent;
   color: var(--clr-gray);
   padding: 0;
+}
+@media (min-width: 43.75em) {
+  .dropdown .nav-dropdown-toggle {
+    cursor: pointer;
+  }
+  .dropdown .nav-dropdown-toggle:hover, .dropdown .nav-dropdown-toggle:focus {
+    color: var(--clr-dark);
+  }
 }
 .dropdown .nav-dropdown-toggle::after {
   position: absolute;

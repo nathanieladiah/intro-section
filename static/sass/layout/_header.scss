@@ -48,10 +48,20 @@ header {
 	font: inherit;
 	color: var(--clr-gray);
 
+	&:hover,
+	&:focus {
+		color: var(--clr-dark);
+	}
+
 	&--cta {
 		border: 2px solid var(--clr-gray);
 		border-radius: 15px;
 		padding:  abs.em(13) abs.em(22);
+
+		&:hover,
+		&:focus {
+			border-color: var(--clr-dark);
+		}
 	}
 }
 
@@ -64,6 +74,15 @@ header {
 		background-color: transparent;
 		color: var(--clr-gray);
 		padding: 0;
+
+		@include abs.breakpoint(medium) {
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				color: var(--clr-dark);
+			}
+		}
 
 		&::after {
 			position: absolute;
@@ -225,6 +244,7 @@ header {
 }
 
 // The actual nav element
+// nav.desktop
 .desktop {
 	// width: 100%;
 	flex: 1;
