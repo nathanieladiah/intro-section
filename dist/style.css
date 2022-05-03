@@ -1,3 +1,26 @@
+:root {
+  --clr-dark: hsl(0, 0%, 8%);
+  --clr-gray: hsl(0, 0%, 41%);
+  --clr-light: hsl(0, 0%, 98%);
+  --ff-sans: "Epilogue", sans-serif;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media (min-width: 43.75em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.425rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
+  }
+}
+
 *,
 *::before,
 *::after {
