@@ -25,12 +25,16 @@
 
 	&__title {
 		font-weight: 700;
+		font-size: var(--fs-700);
 		color: var(--clr-dark);
 		margin-bottom: abs.rem(24);
+		letter-spacing: 0.11px;
 	}
 
 	&__text {
 		margin-bottom: abs.rem(29);
+		letter-spacing: 0.11px;
+		line-height: 1.625;
 	}
 
 	.btn {
@@ -38,21 +42,17 @@
 		font-family: var(--ff-sans);
 		color: var(--clr-light);
 		background-color: var(--clr-dark);
-		padding: abs.rem(16) abs.rem(21);
+		padding: abs.em(16) abs.em(21);
 		border-radius: 15px;
-		margin-bottom: abs.rem(48);
+		margin-bottom: abs.em(48);
 	}
 
 	.logo-container {
 		display: flex;
+		align-items: center;
 		width: 100%;
 		margin-inline: 1rem;
 		gap: abs.rem(30);
-		
-		.brand-logo {
-			// width: 25%;
-			// max-width: abs.rem(82);
-			// transform: scale();
-		}
+		margin-bottom: abs.em(95);	
 	}
 }

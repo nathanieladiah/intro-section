@@ -34,7 +34,8 @@ p {
 // Set up the body
 body {
 	font-family: var(--ff-sans);
-	font-style: var(--fs-400);
+	font-size: var(--fs-400);
+	font-weight: 500;
 	background-color: var(--clr-light);
 	color: var(--clr-gray);
 	line-height: 1.5;
@@ -44,6 +45,10 @@ body {
 	// grid-template-rows: min-content 1fr;
 
 	overflow-x: hidden;
+
+	&.noscroll {
+		overflow: hidden;
+	}
 }
 
 // Make images easier to work with
