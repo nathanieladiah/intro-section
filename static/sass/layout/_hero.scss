@@ -6,29 +6,21 @@
 
 	@include abs.breakpoint(medium) {
 		display: grid;
-		grid-template-rows: 644px;
-		grid-template-columns: 513px 483px;
+		// grid-template-rows: 644px;
+		grid-template-rows: 1fr;
+		grid-template-columns: 45% 42%;
 		grid-template-areas: 
-			// 'title img'
-			// 'body img'
-			// 'btn img'
-			// 'logos img';
-			'body img'
-			'body img'
-			'body img'
 			'body img';
-		// gap: 53px 151px;
-		column-gap: 151px;
+		column-gap: 13%;
 		width: 80%;
-		// 1148
-		// img 483
-		// body 513
-		// max-width: 80%;
+		max-width: abs.rem(1148);
+
 		margin-top: abs.em(80);
 		margin-inline-start: 11%;
 		margin-inline-end: 8%;
-		// gap: abs.rem(151);
+		margin-bottom: abs.em(128);
 	}
+	
 
 	&__img {
 		// make the div take the whole width and have the 
@@ -63,14 +55,14 @@
 		@include abs.breakpoint(medium) {
 			margin-inline: 0;
 			display: grid;
-			grid-template-rows: 259px 82px 59px 85px;
+			grid-template-rows: abs.rem(259) abs.rem(82) abs.rem(59) abs.rem(85);
 			grid-template-columns: 1fr;
 			grid-template-areas: 
 			'title'
 			'text'
 			'btn'
 			'logos';
-			row-gap: 53px;
+			row-gap: abs.rem(53);
 			// flex-grow: 1;
 			// flex: 1;
 			// align-items: flex-start;
@@ -119,6 +111,13 @@
 			grid-area: btn;
 			justify-self: start;
 			margin-bottom: 0;
+
+			&:hover,
+			&:focus {
+				border: 1px solid var(--clr-dark);
+				color: var(--clr-dark);
+				background-color: transparent;
+			}
 		}
 	}
 

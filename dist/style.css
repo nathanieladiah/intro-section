@@ -338,17 +338,19 @@ header {
 @media (min-width: 43.75em) {
   .hero {
     display: grid;
-    grid-template-rows: 644px;
-    grid-template-columns: 513px 483px;
-    grid-template-areas: "body img" "body img" "body img" "body img";
-    -moz-column-gap: 151px;
-         column-gap: 151px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 45% 42%;
+    grid-template-areas: "body img";
+    -moz-column-gap: 13%;
+         column-gap: 13%;
     width: 80%;
+    max-width: 71.75rem;
     margin-top: 5em;
     -webkit-margin-start: 11%;
             margin-inline-start: 11%;
     -webkit-margin-end: 8%;
             margin-inline-end: 8%;
+    margin-bottom: 8em;
   }
 }
 .hero__img {
@@ -377,10 +379,10 @@ header {
   .hero__body {
     margin-inline: 0;
     display: grid;
-    grid-template-rows: 259px 82px 59px 85px;
+    grid-template-rows: 16.1875rem 5.125rem 3.6875rem 5.3125rem;
     grid-template-columns: 1fr;
     grid-template-areas: "title" "text" "btn" "logos";
-    row-gap: 53px;
+    row-gap: 3.3125rem;
   }
 }
 .hero__title {
@@ -426,6 +428,11 @@ header {
     grid-area: btn;
     justify-self: start;
     margin-bottom: 0;
+  }
+  .hero .btn:hover, .hero .btn:focus {
+    border: 1px solid var(--clr-dark);
+    color: var(--clr-dark);
+    background-color: transparent;
   }
 }
 .hero .logo-container {
