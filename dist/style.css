@@ -219,7 +219,7 @@ header {
   transform: translateX(100%);
   transition: transform 500ms ease-in-out;
 }
-.mobile-nav li:not(:last-child) {
+.mobile-nav .nav-item:not(:last-child) {
   margin-bottom: 1.5625rem;
 }
 .mobile-nav .dropdown-items {
@@ -412,6 +412,7 @@ header {
     margin-bottom: 0;
     letter-spacing: -0.21;
     line-height: 1.5;
+    max-width: 45ch;
   }
 }
 .hero .btn {

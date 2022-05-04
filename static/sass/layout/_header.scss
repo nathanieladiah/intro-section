@@ -159,7 +159,7 @@ header {
 	transition: transform 500ms ease-in-out;
 
 
-	li {
+	.nav-item {
 
 		&:not(:last-child) {
 			margin-bottom: abs.rem(25);

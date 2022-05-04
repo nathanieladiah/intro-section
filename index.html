@@ -43,11 +43,12 @@
         <span class="sr-only">Menu</span>
       </button>
 
-      <nav>
-        <ul class="mobile-nav" id="mobile-nav" data-visible="false">
-          <li class="dropdown">
+      <nav class="mobile-nav" id="mobile-nav" data-visible="false">
+        <!-- <ul class="mobile-nav" id="mobile-nav" data-visible="false"> -->
+          <div class="dropdown nav-item">
             <button id="features" class="nav-dropdown-toggle" aria-controls="features-dropdown" aria-expanded="false">Features</button>
-          </li>
+            
+          </div>
           <div class="dropdown-items features" id="features-dropdown" data-visible="false">
               <img src="./static/images/icon-todo.svg" alt="">
               <a href="#" class="nav-link">Todo List</a>
@@ -58,23 +59,23 @@
               <img src="./static/images/icon-planning.svg" alt="">
               <a href="#" class="nav-link">Planning</a>
           </div>
-          <li class="dropdown" id="company">
+          <div class="nav-item dropdown">
             <button id="company" class="nav-dropdown-toggle" aria-controls="company-dropdown" aria-expanded="false">Company</button>
-          </li>
+          </div>
           <div class="dropdown-items company" id="company-dropdown" data-visible="false">
             <a href="#" class="nav-link">History</a>
             <a href="#" class="nav-link">Our Team</a>
             <a href="#" class="nav-link">Blog</a>
           </div>
-          <li><a class="nav-link" href="#">Careers</a></li>
-          <li><a href="#" class="nav-link">About</a></li>
-        </ul>
+          <div class="nav-item"><a class="nav-link" href="#">Careers</a></div>
+          <div class="nav-item"><a href="#" class="nav-link">About</a></div>
+        <!-- </ul> -->
       </nav>
 
       <nav class="desktop">
-        <ul class="desktop-nav" id="desktop-nav" data-visible="false">
+        <ul class="desktop-nav" id="desktop-nav">
           <li class="dropdown">
-            <button id="features" class="nav-dropdown-toggle" aria-controls="dt-features-dropdown" aria-expanded="false">Features</button>
+            <button id="desktop-features" class="nav-dropdown-toggle" aria-controls="dt-features-dropdown" aria-expanded="false">Features</button>
 
             <div class="dropdown-items features" id="dt-features-dropdown" data-visible="false">
                 <img src="./static/images/icon-todo.svg" alt="">
@@ -88,8 +89,8 @@
             </div>
 
           </li>
-          <li class="dropdown" id="company">
-            <button id="company" class="nav-dropdown-toggle" aria-controls="dt-company-dropdown" aria-expanded="false">Company</button>
+          <li class="dropdown">
+            <button id="desktop-company" class="nav-dropdown-toggle" aria-controls="dt-company-dropdown" aria-expanded="false">Company</button>
 
             <div class="dropdown-items company" id="dt-company-dropdown" data-visible="false">
               <a href="#" class="nav-link">History</a>
