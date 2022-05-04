@@ -45,6 +45,5 @@ dropToggles.forEach(toggle => {
 			}, {once: true});
 		}
 
-		// console.log(dropdownId);
 	}
 })

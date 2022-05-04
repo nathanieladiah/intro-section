@@ -12,10 +12,8 @@ header {
 
 		&::after {
 			content: '';
-			// height: 100vh;
 			width: 100%;
 			background-color: black;
-			// position: absolute;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -121,10 +119,7 @@ header {
 
 	@include abs.breakpoint-down(small) {
 		display: block;
-		// position: absolute;
 		z-index: 2000;
-		// right: 1rem;
-		// top: 2rem;
 		background: transparent;
 		background-image: url(../static/images/icon-menu.svg);
 		background-repeat: no-repeat;
@@ -163,11 +158,6 @@ header {
 	transform: translateX(100%);
 	transition: transform 500ms ease-in-out;
 
-	// .nav-link {
-	// 	text-decoration: none;
-	// 	font: inherit;
-	// 	color: var(--clr-gray)
-	// }
 
 	li {
 
@@ -184,7 +174,6 @@ header {
 		display: none;
 
 		&.features {
-			// display: grid;
 			grid-template-columns: abs.rem(20) 1fr;
 			gap: abs.rem(22) 1rem;
 
@@ -224,7 +213,6 @@ header {
 			}
 
 			&[closing] {
-				// display: block;
 				transform: translateX(0);
 				pointer-events: none;
 				inset: 0;
@@ -247,7 +235,6 @@ header {
 // The actual nav element
 // nav.desktop
 .desktop {
-	// width: 100%;
 	flex: 1;
 }
 
@@ -256,9 +243,7 @@ header {
 	display: none;
 
 	@include abs.breakpoint(medium) {
-		// flex: 1;
 		display: flex;
-		// width: 100%;
 		gap: abs.rem(40);
 
 		list-style: none;
@@ -286,7 +271,6 @@ header {
 			padding: abs.em(25);
 			background-color: white;
 			border-radius: 10px;
-			// top: abs.rem(36);
 			top: 3.25rem;
 
 			&[data-visible='true'] {

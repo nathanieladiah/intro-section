@@ -6,7 +6,6 @@
 
 	@include abs.breakpoint(medium) {
 		display: grid;
-		// grid-template-rows: 644px;
 		grid-template-rows: 1fr;
 		grid-template-columns: 45% 42%;
 		grid-template-areas: 
@@ -25,10 +24,8 @@
 	&__img {
 		// make the div take the whole width and have the 
 		// same aspect ratio as the picture
-		// width: 100%;
 		width: 100%;
 		aspect-ratio: 375 / 282;
-		// aspect-ratio: 282/375;
 		background-image: url(../static/images/image-hero-mobile.png);
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -39,8 +36,6 @@
 			background-image: url(../static/images/image-hero-desktop.png);
 			place-self: stretch;
 			margin-bottom: 0;
-			// aspect-ratio: 483/644;
-			// width: 80%;
 
 		}
 	}
@@ -63,9 +58,6 @@
 			'btn'
 			'logos';
 			row-gap: abs.rem(53);
-			// flex-grow: 1;
-			// flex: 1;
-			// align-items: flex-start;
 		}
 	}
 
