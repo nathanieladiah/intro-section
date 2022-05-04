@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution code](https://github.com/nathanieladiah/intro-section)
-- Live Site URL: [Solution site](https://nathanieladiah.github.io/intro-section)
+- Solution URL: [github.com/nathanieladiah/intro-section](https://github.com/nathanieladiah/intro-section)
+- Live Site URL: [nathanieladiah.github.io/intro-section](https://nathanieladiah.github.io/intro-section)
 
 ## My process
 
