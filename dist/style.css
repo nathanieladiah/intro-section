@@ -93,6 +93,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: var(--fs-300);
 }
 @media (max-width: 43.74875em) {
   header::after {
@@ -334,6 +335,22 @@ header {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 43.75em) {
+  .hero {
+    display: grid;
+    grid-template-rows: 644px;
+    grid-template-columns: 513px 483px;
+    grid-template-areas: "body img" "body img" "body img" "body img";
+    -moz-column-gap: 151px;
+         column-gap: 151px;
+    width: 80%;
+    margin-top: 5em;
+    -webkit-margin-start: 11%;
+            margin-inline-start: 11%;
+    -webkit-margin-end: 8%;
+            margin-inline-end: 8%;
+  }
+}
 .hero__img {
   width: 100%;
   aspect-ratio: 375/282;
@@ -342,11 +359,29 @@ header {
   background-size: contain;
   margin-bottom: 3.1875rem;
 }
+@media (min-width: 43.75em) {
+  .hero__img {
+    grid-area: img;
+    background-image: url(../static/images/image-hero-desktop.png);
+    place-self: stretch;
+    margin-bottom: 0;
+  }
+}
 .hero__body {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-inline: 1.3125rem;
+}
+@media (min-width: 43.75em) {
+  .hero__body {
+    margin-inline: 0;
+    display: grid;
+    grid-template-rows: 259px 82px 59px 85px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "text" "btn" "logos";
+    row-gap: 53px;
+  }
 }
 .hero__title {
   font-weight: 700;
@@ -355,10 +390,27 @@ header {
   margin-bottom: 1.5rem;
   letter-spacing: 0.11px;
 }
+@media (min-width: 43.75em) {
+  .hero__title {
+    grid-area: title;
+    align-self: end;
+    margin-bottom: 0;
+    letter-spacing: -0.6px;
+    line-height: 1.04;
+  }
+}
 .hero__text {
   margin-bottom: 1.8125rem;
   letter-spacing: 0.11px;
   line-height: 1.625;
+}
+@media (min-width: 43.75em) {
+  .hero__text {
+    grid-area: text;
+    margin-bottom: 0;
+    letter-spacing: -0.21;
+    line-height: 1.5;
+  }
 }
 .hero .btn {
   text-decoration: none;
@@ -369,6 +421,13 @@ header {
   border-radius: 15px;
   margin-bottom: 3em;
 }
+@media (min-width: 43.75em) {
+  .hero .btn {
+    grid-area: btn;
+    justify-self: start;
+    margin-bottom: 0;
+  }
+}
 .hero .logo-container {
   display: flex;
   align-items: center;
@@ -376,6 +435,14 @@ header {
   margin-inline: 1rem;
   gap: 1.875rem;
   margin-bottom: 5.9375em;
+}
+@media (min-width: 43.75em) {
+  .hero .logo-container {
+    grid-area: logos;
+    margin-bottom: 0;
+    margin-inline: 0;
+    align-self: end;
+  }
 }
 
 .sr-only {

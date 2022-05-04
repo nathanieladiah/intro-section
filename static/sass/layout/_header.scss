@@ -5,6 +5,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-size: var(--fs-300);
 
 
 	@include abs.breakpoint-down(small) {
