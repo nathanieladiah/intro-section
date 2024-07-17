@@ -78,12 +78,10 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -239,21 +237,18 @@ header {
 }
 .mobile-nav .dropdown-items.features[data-visible=true] {
   display: grid;
-  -webkit-animation: fade-in 700ms forwards, add-space 700ms forwards, slide-in 1000ms forwards;
-          animation: fade-in 700ms forwards, add-space 700ms forwards, slide-in 1000ms forwards;
+  animation: fade-in 700ms forwards, add-space 700ms forwards, slide-in 1000ms forwards;
 }
 .mobile-nav .dropdown-items.features[closing] {
   transform: translateX(0);
   pointer-events: none;
   inset: 0;
-  -webkit-animation: fade-out 500ms forwards, remove-space 700ms forwards;
-          animation: fade-out 500ms forwards, remove-space 700ms forwards;
+  animation: fade-out 500ms forwards, remove-space 700ms forwards;
 }
 .mobile-nav .dropdown-items.company[data-visible=true] {
   display: flex;
   transform: translateX(100%);
-  -webkit-animation: fade-in 700ms forwards, add-space 700ms forwards, slide-in 800ms forwards;
-          animation: fade-in 700ms forwards, add-space 700ms forwards, slide-in 800ms forwards;
+  animation: fade-in 700ms forwards, add-space 700ms forwards, slide-in 800ms forwards;
   flex-direction: column;
   gap: 1rem;
 }
@@ -261,8 +256,7 @@ header {
   transform: translateX(0);
   pointer-events: none;
   inset: 0;
-  -webkit-animation: fade-out 500ms forwards, remove-space 500ms forwards;
-          animation: fade-out 500ms forwards, remove-space 500ms forwards;
+  animation: fade-out 500ms forwards, remove-space 500ms forwards;
 }
 .mobile-nav[data-visible=true] {
   transform: translateX(0);
@@ -305,13 +299,11 @@ header {
   }
   .desktop-nav .dropdown-items[data-visible=true] {
     display: grid;
-    -webkit-animation: fade-in 700ms forwards;
-            animation: fade-in 700ms forwards;
+    animation: fade-in 700ms forwards;
     gap: 1rem;
   }
   .desktop-nav .dropdown-items[closing] {
-    -webkit-animation: fade-out 500ms forwards;
-            animation: fade-out 500ms forwards;
+    animation: fade-out 500ms forwards;
   }
   .desktop-nav .dropdown-items.features {
     grid-template-columns: 1rem 1fr;
@@ -325,7 +317,6 @@ header {
   }
   .desktop-nav .dropdown-items.company {
     left: 0;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
   }
@@ -356,15 +347,16 @@ header {
 .hero__img {
   width: 100%;
   aspect-ratio: 375/282;
-  background-image: url(../static/images/image-hero-mobile.png);
+  background-image: url(../static/images/home-theater-hero.jpg);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   margin-bottom: 3.1875rem;
 }
 @media (min-width: 43.75em) {
   .hero__img {
     grid-area: img;
-    background-image: url(../static/images/image-hero-desktop.png);
+    background-image: url(../static/images/home-theater-hero.jpg);
     place-self: stretch;
     margin-bottom: 0;
   }
@@ -480,17 +472,6 @@ header {
   transform: translateX(0);
 }
 
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -501,30 +482,12 @@ header {
     transform: scale(1);
   }
 }
-@-webkit-keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes fade-out {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-@-webkit-keyframes add-space {
-  0% {
-    max-height: 0;
-    margin-bottom: 0;
-  }
-  100% {
-    max-height: 9.8rem;
-    margin-bottom: 2rem;
   }
 }
 @keyframes add-space {
@@ -537,16 +500,6 @@ header {
     margin-bottom: 2rem;
   }
 }
-@-webkit-keyframes remove-space {
-  0% {
-    max-height: 9.8rem;
-    margin-bottom: 2rem;
-  }
-  100% {
-    max-height: 0;
-    margin-bottom: 0;
-  }
-}
 @keyframes remove-space {
   0% {
     max-height: 9.8rem;
@@ -557,28 +510,12 @@ header {
     margin-bottom: 0;
   }
 }
-@-webkit-keyframes slide-up {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @keyframes slide-up {
   0% {
     transform: translateY(100%);
   }
   100% {
     transform: translateY(0%);
-  }
-}
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
   }
 }
 @keyframes slide-in {

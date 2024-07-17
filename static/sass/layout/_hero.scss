@@ -1,132 +1,133 @@
-@use '../abstracts/' as abs;
+@use "../abstracts/" as abs;
 
 .hero {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	@include abs.breakpoint(medium) {
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-template-columns: 45% 42%;
-		grid-template-areas: 
-			'body img';
-		column-gap: 13%;
-		width: 80%;
-		max-width: abs.rem(1148);
+  @include abs.breakpoint(medium) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 45% 42%;
+    grid-template-areas: "body img";
+    column-gap: 13%;
+    width: 80%;
+    max-width: abs.rem(1148);
 
-		margin-top: abs.em(80);
-		margin-inline-start: 11%;
-		margin-inline-end: 8%;
-		margin-bottom: abs.em(128);
-	}
-	
+    margin-top: abs.em(80);
+    margin-inline-start: 11%;
+    margin-inline-end: 8%;
+    margin-bottom: abs.em(128);
+  }
 
-	&__img {
-		// make the div take the whole width and have the 
-		// same aspect ratio as the picture
-		width: 100%;
-		aspect-ratio: 375 / 282;
-		background-image: url(../static/images/image-hero-mobile.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin-bottom: abs.rem(51);
+  &__img {
+    // make the div take the whole width and have the
+    // same aspect ratio as the picture
+    width: 100%;
+    aspect-ratio: 375 / 282;
+    // background-image: url(../static/images/image-hero-mobile.png);
+    background-image: url(../static/images/home-theater-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    // background-size: cover;
+    margin-bottom: abs.rem(51);
 
-		@include abs.breakpoint(medium) {
-			grid-area: img;
-			background-image: url(../static/images/image-hero-desktop.png);
-			place-self: stretch;
-			margin-bottom: 0;
+    @include abs.breakpoint(medium) {
+      grid-area: img;
+      background-image: url(../static/images/home-theater-hero.jpg);
 
-		}
-	}
+      place-self: stretch;
+      margin-bottom: 0;
+    }
+  }
 
-	&__body {
-		display: flex;
+  &__body {
+    display: flex;
 
-		flex-direction: column;
-		align-items: center;
-		margin-inline: abs.rem(21);
+    flex-direction: column;
+    align-items: center;
+    margin-inline: abs.rem(21);
 
-		@include abs.breakpoint(medium) {
-			margin-inline: 0;
-			display: grid;
-			grid-template-rows: abs.rem(259) abs.rem(82) abs.rem(59) abs.rem(85);
-			grid-template-columns: 1fr;
-			grid-template-areas: 
-			'title'
-			'text'
-			'btn'
-			'logos';
-			row-gap: abs.rem(53);
-		}
-	}
+    @include abs.breakpoint(medium) {
+      margin-inline: 0;
+      display: grid;
+      grid-template-rows: abs.rem(259) abs.rem(82) abs.rem(59) abs.rem(85);
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title"
+        "text"
+        "btn"
+        "logos";
+      row-gap: abs.rem(53);
+    }
+  }
 
-	&__title {
-		font-weight: 700;
-		font-size: var(--fs-700);
-		color: var(--clr-dark);
-		margin-bottom: abs.rem(24);
-		letter-spacing: 0.11px;
+  &__title {
+    font-weight: 700;
+    font-size: var(--fs-700);
+    color: var(--clr-dark);
+    margin-bottom: abs.rem(24);
+    letter-spacing: 0.11px;
 
-		@include abs.breakpoint(medium) {
-			grid-area: title;
-			align-self: end;
-			margin-bottom: 0;
-			letter-spacing: -.6px;
-			line-height: 1.04;
-		}
-	}
+    @include abs.breakpoint(medium) {
+      grid-area: title;
+      align-self: end;
+      margin-bottom: 0;
+      letter-spacing: -0.6px;
+      line-height: 1.04;
+    }
+  }
 
-	&__text {
-		margin-bottom: abs.rem(29);
-		letter-spacing: 0.11px;
-		line-height: 1.625;
+  &__text {
+    margin-bottom: abs.rem(29);
+    letter-spacing: 0.11px;
+    line-height: 1.625;
 
-		@include abs.breakpoint(medium) {
-			grid-area: text;
-			margin-bottom: 0;
-			letter-spacing: -0.21;
-			line-height: 1.5;
-			max-width: 45ch;
-		}
-	}
+    @include abs.breakpoint(medium) {
+      grid-area: text;
+      margin-bottom: 0;
+      letter-spacing: -0.21;
+      line-height: 1.5;
+      max-width: 45ch;
+    }
+  }
 
-	.btn {
-		text-decoration: none;
-		font-family: var(--ff-sans);
-		color: var(--clr-light);
-		background-color: var(--clr-dark);
-		padding: abs.em(16) abs.em(21);
-		border-radius: 15px;
-		margin-bottom: abs.em(48);
+  .btn {
+    text-decoration: none;
+    font-family: var(--ff-sans);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding: abs.em(16) abs.em(21);
+    border-radius: 15px;
+    margin-bottom: abs.em(48);
 
-		@include abs.breakpoint(medium) {
-			grid-area: btn;
-			justify-self: start;
-			margin-bottom: 0;
+    @include abs.breakpoint(medium) {
+      grid-area: btn;
+      justify-self: start;
+      margin-bottom: 0;
 
-			&:hover,
-			&:focus {
-				border: 1px solid var(--clr-dark);
-				color: var(--clr-dark);
-				background-color: transparent;
-			}
-		}
-	}
+      &:hover,
+      &:focus {
+        border: 1px solid var(--clr-dark);
+        color: var(--clr-dark);
+        background-color: transparent;
+      }
+    }
+  }
 
-	.logo-container {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		margin-inline: 1rem;
-		gap: abs.rem(30);
-		margin-bottom: abs.em(95);	
+  .logo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-inline: 1rem;
+    gap: abs.rem(30);
+    margin-bottom: abs.em(95);
 
-		@include abs.breakpoint(medium) {
-			grid-area: logos;
-			margin-bottom: 0;
-			margin-inline: 0;
-			align-self: end;
-		}
-	}
+    @include abs.breakpoint(medium) {
+      grid-area: logos;
+      margin-bottom: 0;
+      margin-inline: 0;
+      align-self: end;
+    }
+  }
 }
